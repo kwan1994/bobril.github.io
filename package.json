@@ -52,7 +52,8 @@
     "is-number": "3.0.0",
     "isobject": "3.0.1",
     "inherits": "2.0.3",
-    "minimist": "1.2.0"
+    "minimist": "1.2.0",
+    "is-buffer": "1.1.6"
   },
   "devDependencies": {
     "typescript": "^2.5.2"

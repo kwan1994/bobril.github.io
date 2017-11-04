@@ -25,11 +25,16 @@ const app = b.createComponent<IData>({
                 header: AppBar.create({
                     contentWidth: 1000,
                     leftChildren: [
-                        Image.create({
-                            asset: assets.bobrilLogoInverse,
-                            width: 64,
-                            height: 64
-                        }),
+                        b.styledDiv(
+                            Image.create({
+                                asset: assets.menuIcon,
+                                width: 24,
+                                height: 14
+                            }),
+                            {
+                                paddingRight: 12
+                            }
+                            ),
                         AppBar.Button.create({
                             label: 'BOBRIL',
                             isActive: actualPageId === router.home,

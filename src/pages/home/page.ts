@@ -1,14 +1,11 @@
 import * as b from 'bobril';
-import * as m from 'bobril-m';
-import * as Splitter from '../../components/splitter/lib';
 import * as styles from '../styles';
 import * as Divider from '../../components/divider/lib';
 import * as LCenter from '../../components/lCenter/lib';
+import * as color from '../../components/color/lib';
 
-import * as FurrySection from './sections/furry';
 import * as GetStartedSection from './sections/getStarted';
-import * as FeatureListSection from './sections/featureList';
-import * as BobrilLogoSection from './sections/bobrilLogo';
+import * as BobrilLogoSection from './sections/bobrilPromo';
 import * as CoreFeaturesPromo from './sections/coreFeaturesPromo';
 
 interface IData {
@@ -23,16 +20,13 @@ const home = b.createComponent<IData>({
         me.children = [
             b.styledDiv(
                 LCenter.create({
-                    children: Splitter.create({
-                        children: [
-                            FeatureListSection.create(),
-                            BobrilLogoSection.create({
-                                onGetStartedClick: () => {
+                    children: BobrilLogoSection.create({
+                        onGetStartedClick: () => {
 
-                                }
-                            }),
-                            FurrySection.create(),
-                        ]
+                        },
+                        onDownloadClick: () => {
+
+                        }
                     }),
                     maxWidth: styles.maxPageWidth
                 }),
@@ -53,14 +47,14 @@ const home = b.createComponent<IData>({
 const imageContainerPadding = 24;
 const bobrilPromoStyle = b.styleDef({
     textAlign: 'center',
-    background: m.grey300,
+    background: color.color02,
+    height: `calc(100vh - 60px)`,
     marginTop: -imageContainerPadding,
     marginLeft: -imageContainerPadding,
     marginRight: -imageContainerPadding,
     paddingTop: imageContainerPadding,
     paddingLeft: imageContainerPadding,
-    paddingRight: imageContainerPadding,
-    boxShadow: '0 1px 6px rgba(0,0,0,0.120), 0 1px 4px rgba(0,0,0,0.120)',
+    paddingRight: imageContainerPadding
 });
 
 export default home;

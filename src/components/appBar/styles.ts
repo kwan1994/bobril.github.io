@@ -1,14 +1,13 @@
 import * as b from 'bobril';
-import * as m from 'bobril-m';
+import * as color from '../color/lib';
 
-export const height = 64;
+
+export const height = 60;
 
 export const appBar = b.styleDef({
-    background: m.primary2Color(),
+    background: color.color01,
     overflow: 'hidden',
     height: height,
-    paddingLeft: 16,
-    paddingRight: 16
 });
 
 export const buttonsContainer = b.styleDef({
@@ -21,10 +20,10 @@ export const rightButtonsContainer = b.styleDef({
 
 export const button = b.styleDef(
     {
-        cssFloat: 'left',
+        display: 'inline-block',
     }, {
         hover: {
-            color: m.white
+            color: color.color04
         }
     }
 );
@@ -34,7 +33,7 @@ export const rightButton = b.styleDef(
         cssFloat: 'left',
     }, {
         hover: {
-            color: m.white
+            color: color.color04
         }
     }
 );

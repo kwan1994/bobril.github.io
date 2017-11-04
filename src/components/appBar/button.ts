@@ -34,10 +34,10 @@ export const create = b.createComponent<IData>({
 
 export const buttonStyle = b.styleDef({
     cursor: 'pointer',
-    height: 64,
-    lineHeight: '64px',
-    paddingLeft: 8,
-    paddingRight: 8,
+    height: 60,
+    lineHeight: '60px',
+    paddingLeft: 12,
+    paddingRight: 12,
     fontWeight: 400,
     color: m.grey300
 });

@@ -1,7 +1,7 @@
 import * as b from 'bobril';
 import * as styles from './styles';
-import * as m from 'bobril-m';
 import * as AppButton from './button';
+import * as fontStyle from '../fontStyle/lib';
 
 export const Button = AppButton;
 
@@ -15,7 +15,7 @@ interface IContext extends b.IBobrilCtx {
     data: IData;
 }
 
-export const create = b.createDerivedComponent<IData>(m.Paper, {
+export const create = b.createComponent<IData>({
     render(ctx: IContext, me: b.IBobrilNode) {
         const d = ctx.data;
 
@@ -27,6 +27,7 @@ export const create = b.createDerivedComponent<IData>(m.Paper, {
                             return b.styledDiv(
                                 button,
                                 styles.button,
+                                fontStyle.menuText01
                             );
                         }),
                         styles.buttonsContainer
@@ -36,13 +37,14 @@ export const create = b.createDerivedComponent<IData>(m.Paper, {
                             return b.styledDiv(
                                 button,
                                 styles.rightButton,
+                                fontStyle.menuText01s
                             );
                         }),
                         styles.rightButtonsContainer
                     )
                 ],
                 d.contentWidth && {
-                    minWidth: 852,
+                    minWidth: 1200,
                     maxWidth: d.contentWidth,
                     margin: 'auto'
                 }
@@ -51,8 +53,7 @@ export const create = b.createDerivedComponent<IData>(m.Paper, {
 
         b.style(
             me,
-            styles.appBar,
-            {background: m.primary2Color()}
+            styles.appBar
         );
     }
 });

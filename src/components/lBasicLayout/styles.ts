@@ -1,11 +1,10 @@
 import * as b from 'bobril';
-import * as m from 'bobril-m';
 
 export const footerHeight = 30;
 
 export const basicLayout = b.styleDef({
     minHeight: '100%',
-    minWidth: 320,
+    minWidth: 1200,
     position: 'relative',
     overflow: 'hidden',
 });
@@ -21,7 +20,7 @@ export const header = b.styleDef({
 
 export const content = b.styleDef({
     paddingBottom: footerHeight,
-    paddingTop: 64
+    paddingTop: 60
 });
 
 export const footer = b.styleDef({
