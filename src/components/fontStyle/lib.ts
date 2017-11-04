@@ -5,35 +5,35 @@ const fontBasic = b.styleDef({
 });
 
 export const menuText01 = b.styleDef({
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '17px',
     letterSpacing: '1.75px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'
 });
 
 export const menuText01s = b.styleDef( {
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '16px',
     letterSpacing: '1.75px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'
 });
 
 export const menuText01b = b.styleDef( {
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '18px',
     letterSpacing: '0px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'
 });
 
 export const menuText02 = b.styleDef( {
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '15px',
     letterSpacing: '1.75px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'
 });
 
 export const headerText01 = b.styleDef( {
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '34px',
     letterSpacing: '1.75px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'
@@ -48,7 +48,7 @@ export const headerText02 = b.styleDef( {
 });
 
 export const buttonText01 = b.styleDef( {
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '17px',
     letterSpacing: '1.75px',
     fontFamily: 'Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif'

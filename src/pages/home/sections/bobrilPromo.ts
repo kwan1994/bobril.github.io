@@ -1,5 +1,6 @@
 import * as b from 'bobril';
 import * as Image from '../../../components/image/lib';
+import * as Button from '../../../components/button/lib';
 import * as assets from '../../../assets/assets';
 import * as color from '../../../components/color/lib';
 import * as fontStyle from '../../../components/fontStyle/lib';
@@ -26,7 +27,7 @@ export const create = b.createComponent<IData>({
                         getButtons(d)
                     ],
                     {
-                        marginTop: -130
+                        marginTop: -140
                     }
                 )
             ],
@@ -60,7 +61,7 @@ function getBobrilNotice(): b.IBobrilChildren {
             'is a component-oriented framework for creating web applications inspired by ReactJS' +
             ' (Virtual DOM, components with state) and Mithril (small size, more complete framework).',
             {
-                marginTop: 30,
+                marginTop: 20,
             },
             fontStyle.headerText02,
             {color: color.color04}
@@ -69,6 +70,21 @@ function getBobrilNotice(): b.IBobrilChildren {
 }
 
 function getButtons(d: IData): b.IBobrilChildren {
-    return [];
+    return b.styledDiv(
+        [
+            Button.create({
+                label: 'GET STARTED',
+                action: d.onGetStartedClick,
+                type: Button.Type.Light
+            }),
+            Button.create({
+                label: 'DOWNLOAD',
+                action: d.onGetStartedClick,
+                type: Button.Type.Dark
+            })
+        ],
+        {
+            marginTop: 40
+        });
 }
 
