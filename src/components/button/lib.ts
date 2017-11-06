@@ -60,14 +60,10 @@ const buttonStyle = b.styleDef({
 const buttonLightStyle = b.styleDef({
     background: color.color04,
     color: color.color01,
-    '-webkit-box-shadow': '2px 2px 4px 0px rgba(22,24,26,0.15)',
-    '-moz-box-shadow': '2px 2px 4px 0px rgba(22,24,26,0.15)',
-    'box-shadow': '2px 2px 4px 0px rgba(22,24,26,0.15)'
+    boxShadow: '2px 2px 4px 0px rgba(22,24,26,0.15)'
 }, {
     hover: {
-        '-webkit-box-shadow': '2px 2px 8px 0px rgba(255,255,255,0.30)',
-        '-moz-box-shadow': '2px 2px 8px 0px rgba(255,255,255,0.30)',
-        'box-shadow': '2px 2px 8px 0px rgba(255,255,255,0.30)'
+        boxShadow: '2px 2px 8px 0px rgba(255,255,255,0.30)'
     }
 });
 

@@ -1,12 +1,9 @@
 import * as b from 'bobril';
 import * as styles from '../styles';
-import * as Divider from '../../components/divider/lib';
 import * as LCenter from '../../components/lCenter/lib';
 import * as color from '../../components/color/lib';
-
-import * as GetStartedSection from './sections/getStarted';
-import * as BobrilLogoSection from './sections/bobrilPromo';
-import * as CoreFeaturesPromo from './sections/coreFeaturesPromo';
+import * as BobrilPromo from './sections/bobrilPromo';
+import * as About from './sections/about';
 
 interface IData {
 }
@@ -20,7 +17,7 @@ const home = b.createComponent<IData>({
         me.children = [
             b.styledDiv(
                 LCenter.create({
-                    children: BobrilLogoSection.create({
+                    children: BobrilPromo.create({
                         onGetStartedClick: () => {
 
                         },
@@ -34,9 +31,7 @@ const home = b.createComponent<IData>({
             ),
             LCenter.create({
                 children: [
-                    CoreFeaturesPromo.create(),
-                    Divider.create(),
-                    GetStartedSection.create()
+                    About.create()
                 ],
                 maxWidth: styles.maxPageWidth,
             })
@@ -49,6 +44,7 @@ const bobrilPromoStyle = b.styleDef({
     textAlign: 'center',
     background: color.color02,
     height: `calc(100vh - 60px)`,
+    minHeight: 700,
     marginTop: -imageContainerPadding,
     marginLeft: -imageContainerPadding,
     marginRight: -imageContainerPadding,

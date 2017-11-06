@@ -85,6 +85,7 @@ function getButtons(d: IData): b.IBobrilChildren {
         ],
         {
             marginTop: 40
-        });
+        }
+    );
 }
 

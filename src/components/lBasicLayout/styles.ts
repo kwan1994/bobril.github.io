@@ -1,6 +1,6 @@
 import * as b from 'bobril';
 
-export const footerHeight = 30;
+export const footerHeight = 0; // no footer now
 
 export const basicLayout = b.styleDef({
     minHeight: '100%',

@@ -43,6 +43,13 @@ const app = b.createComponent<IData>({
                             }
                         }),
                         AppBar.Button.create({
+                            label: 'GET STARTED',
+                            isActive: actualPageId === router.getStarted,
+                            action: () => {
+                                b.runTransition(b.createRedirectPush(router.getStarted));
+                            }
+                        }),
+                        AppBar.Button.create({
                             label: 'GUIDES',
                             isActive: actualPageId === router.guides,
                             action: () => {
@@ -54,6 +61,13 @@ const app = b.createComponent<IData>({
                             isActive: actualPageId === router.documentation,
                             action: () => {
                                 b.runTransition(b.createRedirectPush(router.documentation));
+                            }
+                        }),
+                        AppBar.Button.create({
+                            label: 'DOWNLOAD',
+                            isActive: actualPageId === router.download,
+                            action: () => {
+                                b.runTransition(b.createRedirectPush(router.download));
                             }
                         })
                     ],
