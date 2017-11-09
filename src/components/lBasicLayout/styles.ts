@@ -1,5 +1,7 @@
 import * as b from 'bobril';
 
+const sidebarWidth = 240;
+
 export const footerHeight = 0; // no footer now
 
 export const basicLayout = b.styleDef({
@@ -29,4 +31,16 @@ export const footer = b.styleDef({
     position: 'absolute',
     bottom: 0,
     left: 0
+});
+
+export const sidebar = b.styleDef({
+    width: sidebarWidth,
+    position: 'fixed',
+    top: 0,
+    bottom: 0
+});
+
+export const layoutWithSidebar = b.styleDef({
+    marginLeft: sidebarWidth,
+    width: `calc(100% - ${sidebarWidth}px)`
 });

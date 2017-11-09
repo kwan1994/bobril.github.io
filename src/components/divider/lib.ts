@@ -1,5 +1,5 @@
 import * as b from 'bobril';
-import * as m from 'bobril-m';
+import * as color from '../color/lib';
 
 interface IData {
     color?: string;
@@ -22,10 +22,10 @@ export const create = b.createComponent<IData>({
 });
 
 export const dividerStyle = b.styleDef({
-    background: m.grey400,
-    width: '80%',
+    background: color.color03,
+    width: '63.3%',
     margin: 'auto',
-    height: 1,
-    marginTop: 24,
-    marginBottom: 24
+    height: 2,
+    marginTop: 40,
+    marginBottom: 40
 });

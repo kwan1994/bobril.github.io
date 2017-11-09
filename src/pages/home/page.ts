@@ -1,4 +1,5 @@
 import * as b from 'bobril';
+import * as router from '../router';
 import * as styles from '../styles';
 import * as LCenter from '../../components/lCenter/lib';
 import * as color from '../../components/color/lib';
@@ -19,7 +20,7 @@ const home = b.createComponent<IData>({
                 LCenter.create({
                     children: BobrilPromo.create({
                         onGetStartedClick: () => {
-
+                            b.runTransition(b.createRedirectPush(router.getStarted));
                         },
                         onDownloadClick: () => {
 
@@ -50,7 +51,7 @@ const bobrilPromoStyle = b.styleDef({
     marginRight: -imageContainerPadding,
     paddingTop: imageContainerPadding,
     paddingLeft: imageContainerPadding,
-    paddingRight: imageContainerPadding
+    paddingRight: imageContainerPadding,
 });
 
 export default home;

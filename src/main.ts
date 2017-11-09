@@ -30,5 +30,9 @@ function loadGithubMarkdownStyles() {
         s.setAttribute('href', markdownCss);
         head.appendChild(s);
         b.injectCss('html,body{margin:0; padding:0; height:100%; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif !important}');
+
+        // Override github style
+        b.injectCss('.markdown-body {color: #ececed} .markdown-body .highlight pre, .markdown-body pre {background: #4c5060 ; color: #cacdd4}');
+
     });
 }

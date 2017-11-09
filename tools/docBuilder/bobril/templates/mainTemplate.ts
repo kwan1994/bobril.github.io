@@ -15,20 +15,21 @@ export function generateMainPage(data: IMainPageData): string {
             children: [
                 {
                     tag: 'div',
-                    children: [${data.menu}],
+                    children: [${data.content}],
                     style: {
-                        width: ${menuWidth},
-                        cssFloat: 'left',
-                        position: 'fixed'
+                        padding: '16px 16px 16px 32px',
+                        
+                        marginRight: ${menuWidth}
                     }
                 },
                 {
                     tag: 'div',
-                    children: [${data.content}],
+                    children: [${data.menu}],
                     style: {
-                        marginLeft: ${menuWidth + 16},
-                        borderLeft: '1px solid #bdbdbd',
-                        padding: '16px 16px 16px 32px'
+                        width: ${menuWidth},
+                        position: 'fixed',
+                        right: 0,
+                        top: 84
                     }
                 }
             ]

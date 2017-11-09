@@ -8,6 +8,7 @@ interface IData {
     header?: b.IBobrilChildren;
     content: b.IBobrilChildren;
     footer?: b.IBobrilChildren;
+    sidebar?: b.IBobrilChildren;
     backgroundColor?: string;
 }
 
@@ -20,15 +21,25 @@ export const create = b.createComponent<IData>({
         const d = ctx.data;
 
         me.children = [
-            d.header && m.Paper({
-                zDepth: zDepthHeader,
-                children: b.styledDiv(d.header, styles.header)
-            }),
+            d.sidebar && b.styledDiv(
+                d.sidebar,
+                styles.sidebar
+            ),
+            d.header &&  b.styledDiv(
+                d.header,
+                styles.header,
+                d.sidebar && styles.layoutWithSidebar
+            ),
             d.content && b.styledDiv(
                 d.content,
                 styles.content,
+                d.sidebar && styles.layoutWithSidebar
             ),
-            d.footer && b.styledDiv(d.footer, styles.footer)
+            d.footer && b.styledDiv(
+                d.footer,
+                styles.footer,
+                d.sidebar && styles.layoutWithSidebar
+            )
         ];
 
         b.style(

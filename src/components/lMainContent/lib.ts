@@ -3,6 +3,7 @@ import * as styles from './styles';
 
 interface IData {
     content: b.IBobrilChildren;
+    background? : string;
 }
 
 interface IContext extends b.IBobrilCtx {
@@ -15,13 +16,14 @@ export const create = b.createComponent<IData>({
         ctx.media = b.getMedia();
 
         const data = ctx.data;
-        const media = ctx.media;
 
         me.children = data.content;
 
         b.style(
             me,
-            styles.contentPc
+            styles.content,
+            styles.contentPc,
+            data.background && {background: data.background}
         );
     },
 });

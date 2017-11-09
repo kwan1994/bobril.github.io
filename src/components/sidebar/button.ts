@@ -1,9 +1,10 @@
 import * as b from 'bobril';
-import * as m from 'bobril-m';
+import * as color from '../color/lib';
+import * as fontStyle from '../fontStyle/lib';
 
 export interface IData {
     label: string;
-    action?: () => void;
+    action: () => void;
     isActive?: boolean;
 }
 
@@ -22,23 +23,23 @@ export const create = b.createComponent<IData>({
         b.style(
             me,
             buttonStyle,
-            d.isActive && {color: m.white},
-            ctx.data.action === undefined && {cursor: 'initial'}
+            fontStyle.menuText02,
+            d.isActive && {color: color.color03}
         );
     },
 
     onPointerDown(ctx: IContext): boolean {
-        ctx.data.action && ctx.data.action();
+        ctx.data.action();
         return true;
     }
 });
 
 export const buttonStyle = b.styleDef({
     cursor: 'pointer',
-    height: 60,
-    lineHeight: '60px',
-    paddingLeft: 12,
-    paddingRight: 12,
+    textAlign: 'center',
+    paddingLeft: 40,
+    paddingRight: 40,
+    marginBottom: 34,
     fontWeight: 400,
-    color: m.grey300
+    color: color.color01
 });
